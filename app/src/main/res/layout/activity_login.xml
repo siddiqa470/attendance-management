@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/light_blue_bg"
+    android:layout_height="match_parent">
+
+    <!-- Top Image -->
+    <ImageView
+        android:src="@drawable/login5"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:layout_marginBottom="1dp"
+        android:contentDescription="Top Image" />
+
+    <!-- Card-style container -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/login_card_bg"
+        android:padding="24dp"
+        android:elevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Welcome Back!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_primary"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/emailEditText"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Remember Me + Forgot Password -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <CheckBox
+                android:id="@+id/rememberCheckBox"
+                android:text="Remember Me"
+                android:textColor="@color/blue_primary"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Forgot Password?"
+                android:textColor="@color/blue_primary"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- Login Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/login_button_bg"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Or sign in with -->
+    <TextView
+        android:text="Or sign in with"
+        android:textColor="@color/blue_primary"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Social Icons -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/google"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:src="@drawable/microsoft"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

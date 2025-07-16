@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/light_blue_bg">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="0dp"
+        android:background="@drawable/circle_blue_bg"
+        android:padding="8dp"
+        android:src="@drawable/arrowback_icon"
+        android:contentDescription="Back" />
+
+    <!-- 👩 Profile Image -->
+    <ImageView
+        android:id="@+id/teacherImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/teacher_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circle_bg"
+        android:scaleType="centerCrop" />
+
+    <!-- 🔔 Notification Icon -->
+    <ImageView
+        android:id="@+id/notificationIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/notification"
+        android:layout_marginTop="25dp"
+        android:layout_alignTop="@id/teacherImage"
+        android:layout_toStartOf="@id/teacherImage"
+        android:layout_marginEnd="13dp" />
+
+    <!-- 👋 Hello Text -->
+    <TextView
+        android:id="@+id/helloText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome,"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_primary"
+        android:layout_below="@id/teacherImage"
+        android:layout_marginTop="45dp" />
+
+    <!-- 🧑‍🏫 Teacher Name -->
+    <TextView
+        android:id="@+id/teacherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ms. Siddiqa"
+        android:textSize="23sp"
+        android:textColor="@color/blue_primary"
+        android:layout_below="@id/helloText"
+        android:layout_marginTop="4dp" />
+
+    <!-- 📚 Student Class Label -->
+    <TextView
+        android:id="@+id/classLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📚 Select Class"
+        android:textSize="16sp"
+        android:layout_below="@id/teacherName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp" />
+
+    <!-- 📘 Class Spinner -->
+    <Spinner
+        android:id="@+id/classSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classLabel"
+        android:layout_marginTop="8dp" />
+
+    <!-- 🧠 Subject Label -->
+    <TextView
+        android:id="@+id/subjectLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🧠 Select Subject"
+        android:textSize="16sp"
+        android:layout_below="@id/classSpinner"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentStart="true" />
+
+    <!-- 📘 Subject Spinner -->
+    <Spinner
+        android:id="@+id/subjectSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subjectLabel"
+        android:layout_marginTop="8dp" />
+
+    <!-- 🔗 Generate Attendance Link Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/generateLinkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔗 Generate Attendance Link"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/login_button_bg"
+        android:backgroundTint="@null"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/subjectSpinner"
+        android:layout_marginTop="40dp" />
+
+    <!-- 📋 Generated Link -->
+    <TextView
+        android:id="@+id/generatedLinkText"
+        android:text="📋 Generated Link: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@id/generateLinkButton"
+        android:layout_marginTop="24dp" />
+
+    <!-- 📎 Copy Link Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/copyLinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copy Link"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/login_button_bg"
+        android:backgroundTint="@null"
+        android:layout_below="@id/generatedLinkText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>
